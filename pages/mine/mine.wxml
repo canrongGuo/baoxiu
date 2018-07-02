@@ -1,0 +1,41 @@
+<!--pages/mine/mine.wxml-->
+<view class='page'>
+    <!--搜索框-->
+    <view class="page__bd">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm='searchList'/>
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">搜索</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+    </view>
+    <view class='line'></view>
+    <!--报备列表-->
+     <scroll-view id="meterList" scroll-top="{{scrollTop}}" scroll-y style="height:{{windowHeight}}px;" bindscroll="scroll"> 
+        <!-- <view class='content' wx:for="{{10}}"> -->
+         <view class='content' wx:for="{{menuList}}"> 
+            <view class='list'>
+                <view class='title ellipsis-1'>【{{item.city}}-{{item.area}}】{{item.address}}</view>
+                <view class='desc weui-flex'>
+                    <image src='../image/shopList.png'/>
+                    <text>客户：{{item.name}}</text>
+                    <view class='clearfix'></view>
+                </view>
+                <view class='status'>
+                    <text>状态：了解{{item.cname}}</text>
+                    <text>{{item.create_time}}</text>
+                </view>
+            </view>
+        </view>
+     </scroll-view> 
+</view>

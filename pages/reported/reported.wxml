@@ -1,0 +1,45 @@
+<!--pages/reported/reported.wxml-->
+<view class='page'>
+    <view class='title'>客户报备详情</view>
+    <view class='content'>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class='list'>
+                <text>报备项目</text>
+                <view class='select'>
+                    <text>{{!!array[index]?array[index]:"请选择"}}</text>
+                    <image src='../image/right.png'/>
+                </view>
+                <view class='clearfix'></view>
+                <!-- <text>{{!!array[index]?array[index]:"报备项目"}}</text>
+                <image src='../image/right.png'/>
+                <view class='clearfix'></view> -->
+            </view>
+        </picker>
+        <view class='list'>
+            <input bindinput='input' data-type="name" type='text' placeholder='请输入客户名称' value="{{name}}"/>
+        </view>
+        <view class='list'>
+            <input bindinput='input' data-type="mobile" type='text' placeholder='请输入客户手机号码' value="{{mobile}}"/>
+        </view>
+        <view class='list'>
+            <input bindinput='input' data-type="cardNo" type='text' placeholder='请输入客户VIP卡号' value="{{cardNo}}"/>
+        </view>
+        <view class='list'>
+            <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                <text>地址</text>
+                <view class='select'>
+                    <text>{{!!region?region:"请选择"}}</text>
+                    <image src='../image/right.png'/>
+                </view>
+                <view class='clearfix'></view>
+            </picker>
+        </view>
+        <view class='list'>
+            <input bindinput='input' data-type="address" type='text' placeholder='请输入详情地址' value="{{address}}"/>
+        </view>
+    </view>
+    <view class='button'>
+        <view bindtap='submit'>提交</view>
+    </view>
+    <view class='myReort' bindtap='openMyBaobei'>我的报备</view>
+</view>

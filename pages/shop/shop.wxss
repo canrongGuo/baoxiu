@@ -1,0 +1,185 @@
+/* pages/shop/shop.wxss */
+.page{
+    font-family: PingFangSC-Regular;
+}
+.phcolor{
+   color:#fff !important;
+}
+.line{
+    background: #f5f5f5;
+    height: 7px;
+    width: 100%;
+}
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.box{
+    position: relative;
+}
+.header{
+    position: relative;
+    margin-bottom:-8px;
+}
+.header .search{
+    position: absolute;
+    top:5%;
+    left: 0;
+    width: 100%;
+    z-index:99;
+}
+.header .search image{
+    width: 26px;
+    height: 26px;
+    margin:0 auto;
+    margin-top:6px;
+    margin-right: -8%;
+}
+.header .search .input{
+    margin:0 auto;
+    border: 1px solid #D4D4D4;
+    border-radius: 24px;
+    height: 28px;
+    padding: 0 5%;
+    margin-top:1%;
+}
+.header .search .input image{
+    width:22px;
+    height:22px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 50%;
+    margin-top: 4px;
+}
+.header .search .input input{
+    font-family: PingFangSC-Regular;
+    font-size: 13px;
+    letter-spacing: -0.01px;
+    float: left;
+    margin-top: 3px;
+    color: #fff;
+}
+.header image.bg{
+    width: 100%;
+    max-height: 28.3%;
+}
+/*菜单*/
+.menu .btn{
+    width: 50%;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    position: relative;
+    background: #fff;
+}
+.menu .btn.active{
+    color: #1772DB;
+}
+.menu .btn text{
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    letter-spacing: -0.01px;
+}
+.menu .btn:first-of-type{
+    border-right: 1px solid #D8D8D8;
+}
+.menu .btn image{
+    width: 30px;
+    height: 20px;
+    position:absolute;
+    right:25%;
+    top:25%;
+}
+/*分类菜单*/
+.class_menu{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    background: #fff;
+    z-index:3;
+    padding: 5%;
+    padding-bottom:0;
+}
+.class_menu.hidden{
+    display: none;
+}
+.class_menu .item{
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    width: 25%;
+    border: 1px solid #D4D4D4;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    letter-spacing: -0.01px;
+    margin-right:7%;
+    margin-bottom:5%;
+}
+.class_menu .item.active{
+    border-color:#1772DB;
+    color: #1772DB;
+}
+/*商品列表*/
+.shopList .s_lis{
+    padding:3%;
+    border-bottom: 1px solid #E3E3E3;
+    font-family: PingFangSC-Regular;
+}
+.shopList .s_lis image{
+    width: 130px;
+    height: 96px;
+    margin-right:5%;
+}
+.shopList .s_lis .desc{
+    max-width:58%;
+}
+.shopList .s_lis .desc .title{
+    font-size: 16px;
+    color: #333333;
+    letter-spacing: -0.01px;
+}
+.shopList .s_lis .desc .d_desc{
+    font-size: 13px;
+    color: #999999;
+    letter-spacing: -0.01px;
+    padding:5px 0;
+}
+.shopList .s_lis .desc .sale{
+    font-size: 14px;
+    color: #FF0000;
+    letter-spacing: -0.01px;
+}
+
+.right_btn{
+    position: fixed;
+    bottom: 10%;
+    right: 3%;
+    z-index: 9;
+}
+.right_btn view{
+    width: 32px;
+    height: 32px;
+    background: #75aae9;
+    margin-bottom: 10px;
+}
+.right_btn button{
+    position:absolute;
+    width:32px;
+    height:32px;
+    top:0;
+    left:0;
+}
+.right_btn view image{
+    width: 22px;
+    height: 22px;
+    margin-top:5px;
+    margin-left:5px;
+}
+button:active{
+    background: none;
+}

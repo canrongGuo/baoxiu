@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class='page' wx:for="{{menuList}}">
+    <view class='list' wx:if="{{item.title=='客户报备'}}">
+        <view class='box'>
+            <view class='img'>
+                <image src="{{item.image}}"/>
+            </view>
+        </view>
+        <view class='button'>
+            <view bindtap='openChildWin' data-type="{{item.title}}">{{item.title}}</view>
+        </view>
+    </view>
+    <view class='list' wx:if="{{item.title=='整装商城'}}">
+        <view class='box'>
+            <view class='img'></view>
+        </view>
+        <image class='bg' src='{{item.image}}'/>
+        <view class='button'>
+            <view bindtap='openChildWin' data-type="{{item.title}}">{{item.title}}</view>
+        </view>
+    </view> 
+</view>

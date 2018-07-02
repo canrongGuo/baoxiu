@@ -1,0 +1,65 @@
+<!--pages/chat/chat.wxml-->
+<view class='page'>
+    <view class='chat_content'>
+        <view class='list'>
+            <view class='time'>
+                <text>10:09:56</text>
+            </view>
+            <!--发送的信息-->
+            <view class='chat_right' wx:if="{{true}}">
+                <view class="logo">
+                    <image src='../image/icon.png'/>
+                </view>
+                <view class="msg">
+                    <text></text>
+                    <view class="placeholder">希望可以帮到您</view>
+                </view>
+                <view class='clearfix'></view>
+            </view> 
+            <!--接受的信息-->
+            <view class='chat_left' wx:if="{{false}}">
+                <view class="logo">
+                    <image src='../image/icon.png'/>
+                </view>
+                <view class="msg">
+                    <text></text>
+                    <view class="placeholder">希望可以帮到您</view>
+                </view>
+                <view class='clearfix'></view>
+            </view>
+        </view>
+        <view class='list'>
+            <view class='time'>
+                <text>10:09:56</text>
+            </view>
+            <!--发送的信息-->
+            <view class='chat_right' wx:if="{{false}}">
+                <view class="logo">
+                    <image src='../image/icon.png'/>
+                </view>
+                <view class="msg">
+                    <text></text>
+                    <view class="placeholder">希望可以帮到您</view>
+                </view>
+                <view class='clearfix'></view>
+            </view> 
+            <!--接受的信息-->
+            <view class='chat_left' wx:if="{{true}}">
+                <view class="logo">
+                    <image src='../image/icon.png'/>
+                </view>
+                <view class="msg">
+                    <text></text>
+                    <view class="placeholder">希望可以帮到您希望可以帮到您希望可以帮到您</view>
+                </view>
+                <view class='clearfix'></view>
+            </view>
+        </view>
+    </view>
+    <view class='send_box weui-flex'>
+        <image src='../image/say.png'/>
+        <input type='text'/>
+        <image src='../image/smile.png'/>
+        <image src='../image/add.png'/>
+    </view>
+</view>

@@ -1,0 +1,5 @@
+配置域名
+ https://apis.map.qq.com
+ http://120.76.195.21:8084
+ 
+在http://lbs.qq.com/qqmap_wx_jssdk/index.html申请一个key放到reported.js里面

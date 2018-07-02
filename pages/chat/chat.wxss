@@ -1,0 +1,116 @@
+/* pages/chat/chat.wxss */
+.chat_content{
+    padding: 0 5%;
+}
+.chat_content .list{
+    margin-bottom: 5%;
+}
+.chat_content .list .time{
+    font-size: 10px;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+}
+.chat_content .list .time text{
+    font-family: PingFangSC-Regular;
+    font-size: 10px;
+    color: #FFFFFF;
+    letter-spacing: -0px;
+    background: #DFDFDF;
+    border-radius: 2px;
+    padding: 3px 10px;
+}
+.chat_content .list view .logo image{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+}
+.chat_content .list view.chat_left .logo image{
+    float: left;
+}
+.chat_content .list view.chat_right .logo image{
+    float: right;
+}
+.chat_content .list view .msg{
+    border-radius: 10px;
+    background: #99BBE2;
+    padding:4% 5%;
+    max-width: 60%; 
+    position: relative;
+}
+.chat_content .list view.chat_left .msg{
+    margin-left: 8%;
+    float: left;
+}
+.chat_content .list view.chat_right .msg{
+    border: 1px solid #D4D4D4;
+    background:#fff;
+    color: #666;
+    margin-right: 8%;
+    float: right;
+}
+.chat_content .list view .msg text{
+    position: absolute;
+    top: 17px;
+    width: 16px;
+    height: 16px;
+    background: #99BBE2;
+    transform: rotate(-35deg) skew(30deg, 13deg);
+    -webkit-transform: rotate(-35deg) skew(30deg, 13deg);
+}
+.chat_content .list view.chat_left .msg text{
+    left: -8px;
+}
+.chat_content .list view.chat_right .msg text{
+    right: -9px;
+    background: #fff;
+    border-bottom: 1px solid #d4d4d4;
+    border-right: 1px solid #d4d4d4;
+    transform: rotate(-35deg) skew(30deg, 20deg);
+    -webkit-transform: rotate(-35deg) skew(30deg, 20deg);
+}
+.chat_content .list view .msg .placeholder{
+    line-height: 25px;
+    font-family: PingFangSC-Regular;
+    font-size: 13px;
+    color: #FFFFFF;
+    letter-spacing: -0.01px;
+}
+.chat_content .list view.chat_right .msg .placeholder{
+    color: #666;
+}
+
+/*底部发送框*/
+.send_box{
+    background: #F5F5F5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding:3.5% 0;
+    overflow: hidden;
+}
+.send_box image{
+    width: 22px;
+    height: 22px;
+    margin-right:10px;
+    margin-top: 1.5%;
+}
+.send_box image:first-of-type{
+    margin-left: 10px;
+}
+.send_box image:last-of-type{
+    margin-right: 0;
+}
+.send_box input{
+    background: #fff;
+    border-radius: 22px;
+    height: 25px;
+    line-height: 25px;
+    padding: 3px 3%;
+    padding-right: 2.5%;
+    font-size: 13px;
+    margin-right: 10px;
+    min-width:62%; 
+    max-width:62%; 
+}

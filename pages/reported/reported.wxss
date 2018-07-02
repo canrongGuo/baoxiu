@@ -1,0 +1,62 @@
+/* pages/reported/reported.wxss */
+.page .title{
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    letter-spacing: -0.01px;
+}
+.list{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 5%;
+    border-bottom: 1px solid #e3e3e3;
+}
+picker .list{
+    border-top: 1px solid #e3e3e3;
+}
+.list text{
+    font-size: 14px;
+    color: #333;
+    letter-spacing: 0;
+}
+.list input{
+    font-size: 14px;
+    color: #999;
+    letter-spacing: 0;
+    height: 50px;
+    line-height: 50px;
+}
+.list image{
+    width:18px;
+    height:18px;
+    float:right;
+    margin-top:17px;
+}
+.list .select{
+    float: right;
+}
+
+.button{
+    padding: 0 5%;
+    margin-top: 10%;
+}
+.button view{
+    background: #1772DB;
+    border-radius: 10px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+.myReort{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 13px;
+    color: #666;
+    letter-spacing: -0.01px;
+    padding: 5% 10%;
+}

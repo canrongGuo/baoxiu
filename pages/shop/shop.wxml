@@ -1,0 +1,88 @@
+<!--pages/shop/shop.wxml-->
+<scroll-view scroll-y style="height:{{listHeight}}px;" bindscroll="scroll" scroll-top="{{scrollTop}}">
+    <view class='page'>
+        <view class='box'> 
+            <!--头部内容-->
+            <view class='header'>
+                <view class='search weui-flex'>
+                    <image src='../image/scanner.png'/> 
+                    <view class='input'>
+                        <image src='../image/search.png'/>
+                        <input placeholder-class="phcolor" type='text' placeholder='请输入搜索' value="{{searchValue}}" bindinput='searchMsg' bindconfirm='comfirm'/>
+                        <view class='clearfix'></view>
+                    </view>
+                </view>
+                <!-- <image class='bg' src='../image/shop_bg.png'/> -->
+                <swiper style='height:{{swiperHeight}}px;' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">  
+                    <block wx:for="{{imgUrls}}">  
+                        <swiper-item>  
+                            <navigator url="{{item.link}}" hover-class="navigator-hover">  
+                                <image src="{{item.url}}" class="slide-image bg"/>  
+                            </navigator>   
+                        </swiper-item>  
+                    </block>  
+                </swiper>
+            </view>
+            <!--菜单选项-->
+            <view class='menu weui-flex'>
+                <view class='btn {{selected!=""?"active":""}}' data-type="class" bindtap='order'>
+                    <text>分类</text>
+                    <image src="../image/bottom{{selected!=''?1:''}}.png"/>
+                </view>
+                <view class='btn {{selected1!=""?"active":""}}' data-type='order' bindtap='order'>
+                    <text>排序</text>
+                    <image src="../image/bottom{{selected1!=''?1:''}}.png"/>
+                </view>
+            </view>
+            <view style='position:relative;'>
+                <!--分类菜单-->
+                <view class='class_menu {{show=="class"?"":"hidden"}}' id="menu1">
+                    <view wx:for="{{classList}}" class='item {{selected==item.name?"active":""}}' data-cid="{{item.id}}" data-type="{{item.name}}" data-father="class" bindtap='selected'>{{item.name}}</view> 
+                </view>
+                <view class='class_menu {{show1=="order"?"":"hidden"}}' id="menu2" style='bottom:-117px;'>
+                    <view class='item {{selected1=="评价最好"?"active":""}}' data-type="评价最好" data-father="order" bindtap='selected'>评价最好</view>
+                    <view class='item {{selected1=="人气最高"?"active":""}}' data-type="人气最高" data-father="order" bindtap='selected'>人气最高</view>
+                    <view class='item {{selected1=="价格升序"?"active":""}}' data-type="价格升序" data-father="order" bindtap='selected'>价格升序</view>
+                    <view class='item {{selected1=="价格降序"?"active":""}}' data-type="价格降序" data-father="order" bindtap='selected'>价格降序</view>
+                </view>
+            </view>
+            <view class='line'></view>
+            
+        </view>
+        <!--商品列表-->
+        <view class='shopList'>
+            <view class='s_lis weui-flex' wx:for="{{shopList}}">
+                <image src='{{HEADER+item.img}}'/>
+                <view class='desc'>
+                    <view class='title ellipsis-1'>{{item.title}}</view>
+                    <view class='d_desc ellipsis-2'>{{item.content}}</view>
+                    <view class='sale'>￥{{item.price}}</view>
+                </view>
+            </view>
+            <!-- <view class='s_lis weui-flex'>
+                <image src='../image/shopList.png'/>
+                <view class='desc'>
+                    <view class='title ellipsis-1'>商品名称</view>
+                    <view class='d_desc ellipsis-2'>简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介</view>
+                    <view class='sale'>￥2345</view>
+                </view>
+            </view>
+            <view class='s_lis weui-flex'>
+                <image src='../image/shopList.png'/>
+                <view class='desc'>
+                    <view class='title ellipsis-1'>商品名称</view>
+                    <view class='d_desc ellipsis-2'>简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介</view>
+                    <view class='sale'>￥2345</view>
+                </view>
+            </view> -->
+        </view>
+        <view class='right_btn'>
+            <view bindtap='goHome'><image src='../image/home.png'/></view>
+            <view style='position:relative;'>
+                <image src='../image/kefu.png'/>
+                <button open-type="contact"></button>
+            </view>
+            <view bindtap='returnTop'><image src='../image/top.png'/></view>
+        </view>
+    </view>
+</scroll-view>

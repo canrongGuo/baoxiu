@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/login/login",
+    "pages/login_phone/login_phone",
+    "pages/regist/regist",
+    "pages/chat/chat",
+    "pages/shop/shop",
+    "pages/reported/reported",
+    "pages/mine/mine"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1673db",
+    "navigationBarTitleText": "鑫邦整合家",
+    "navigationBarTextStyle":"#fff"
+  }
+}

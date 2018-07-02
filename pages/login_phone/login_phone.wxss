@@ -1,0 +1,102 @@
+/* pages/login/login.wxss */
+.header{
+    margin-top: 25%;
+    padding: 0 10%;
+}
+.title{
+    height: 1px;
+    border-top: 1px solid #ABC2DC;
+    text-align: center;
+}
+.title text{
+    position: relative;
+    top: -20px;
+    background: #fff;
+    padding: 0 20px;
+    color: #1890FF;
+    font-size: 22px;
+}
+.login{
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 22px;
+    color: #ABC2DC;
+    letter-spacing: -0.01px;
+    margin-top: 10px;
+}
+/*登陆输入框*/
+.content{
+    padding: 0 10%;
+    margin-top: 20%;
+}
+.content .input{
+    background: #FFFFFF;
+    border: 1px solid #D4D4D4;
+    border-radius: 24px;
+    height: 35px;
+    padding: 0 5%;
+    margin-top: 25px;
+}
+.content .input image{
+    width:22px;
+    height:22px;
+    float: left;
+    margin-right: 20px;
+    /* border-radius: 50%; */
+    margin-top: 6px;
+}
+.content .input input{
+    font-family: PingFangSC-Regular;
+    font-size: 13px;
+    letter-spacing: -0.01px;
+    float: left;
+    margin-top: 6px;
+}
+.changeLogin{
+    font-family: PingFangSC-Regular;
+    font-size: 13px;
+    color: #1890FF;
+    letter-spacing: -0.01px;
+    float: right;
+    padding: 10px;    
+}
+.loginBtn{
+    padding: 0 10%;
+}
+.loginBtn view{
+    margin-top: 10%;
+    text-align: center;
+    background: #1772DB;
+    box-shadow: 0 0 4px 0 rgba(23,114,219,0.40);
+    border-radius: 26px;
+    color: #fff;
+    height: 35px;
+    line-height: 35px;
+}
+.code{
+    position: relative;
+}
+.code .getCode{
+    position: absolute;
+    top: 0;
+    right: -10px;
+    background: #F5F5F5;
+    border-radius: 26px;
+    font-size:13px;
+    padding:9px 10px;
+    font-family: PingFangSC-Regular;
+    color: #999999;
+    letter-spacing: -0.01px;
+}
+.code .getCode.active{
+    background: #1772DB;
+    color: #fff;
+}
+.regist{
+    text-align: center;
+    font-size: 13px;
+    color: #1890FF;
+    height: 35px;
+    line-height: 35px;
+    margin-top: 5%;
+}
